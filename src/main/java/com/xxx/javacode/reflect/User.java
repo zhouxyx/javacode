@@ -42,6 +42,7 @@ public class User extends Account implements Serializable, Cloneable {
 	}
 
 	public Double salary(double monthSalary) {
+		hello();
 		return 12 * monthSalary;
 	}
 

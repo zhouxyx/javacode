@@ -1,6 +1,7 @@
 package com.xxx.javacode.reflect;
 
 import java.lang.annotation.Annotation;
+import java.lang.reflect.Array;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -82,7 +83,13 @@ public class ReflectMainTest {
         Type[] genericTypes = parameterizedType.getActualTypeArguments();
 		System.out.println("泛型类型=>"+genericTypes[0]);
 		
+		//数组
+		int[] is = (int[]) Array.newInstance(int.class, 5);
+		is[0] = 1;is[1]=2;
+		System.out.println("array ="+is);
 		
+		Class<?> intArray = Class.forName("[I");
+		System.out.println("is array ? "+intArray.isArray());
 		
 	}
 

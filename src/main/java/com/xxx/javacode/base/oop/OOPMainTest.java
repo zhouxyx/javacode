@@ -41,6 +41,18 @@ public class OOPMainTest {
 		//t.staticMethod(); 这样调用也可以。正常情况下应该是：
 		Teacher.staticMethod();
 		
+		//匿名内部类
+		AbstractObject ao = new AbstractObject() {
+			@Override
+			public void method4() {
+				System.out.println("重写抽象方法");
+			}
+		};
+		
+		ao.method4();
+		ao.method1();
+		AbstractObject.method2();
+		
 	}
 	
 	//静态内部类
